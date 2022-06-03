@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+	<title>JS Form Validation</title>
+</head>
+<style>
+.errormsg {
+  color: red;
+  background-color: yellow;
+  display: none;
+}
+</style>
+<body>
+	<form action="mailto:me@fakeemail.com" onsubmit="return checkForm();">
+	<fieldset>
+	    <legend>Personal details</legend>
+	    <p>
+	      <label>Full name:<input type="text" name="fullname" id="fullname"></label>
+	    </p>
+	    <p class="errormsg" id="nameerrormsg">Please enter your name above</p>
+
+	    <p>
+	      <label>Street Address:<input type="text" name="streetaddr" id="streetaddr"></label>
+	    </p>
+	    <p class="errormsg" id="addrerrormsg">Please enter your street address</p>
+
+	    <p>
+	      <label>Quantity:<input type="text" name="quantity" id="quantity"></label>
+	    </p>
+	    <p class="errormsg" id="qtyerrormsg">Please enter your quantity</p>
+	 </fieldset>
+	 <input type="submit" value="Submit">
+	</form>
+<script>
+	function checkForm() {
+		window.alert("You clicked Submit!");
+	 	var fullNameCheck = document.getElementById("fullname");
+	  	var addressCheck = document.getElementById("streetaddr");
+	  	var quantityCheck = document.getElementById("quantity");
+	  	var is_valid = false;
+	  	document.getElementById("nameerrormsg").style.display = "none";
+	  	document.getElementById("addrerrormsg").style.display = "none";
+	  	document.getElementById("qtyerrormsg").style.display = "none";
+	  	is_valid = true;
+
+	  	if (fullNameCheck.value == "") {
+	    		document.getElementById("nameerrormsg").style.display = "inline";
+	    		is_valid = false;
+	  	}
+	  	if (addressCheck.value == "") {
+	   		document.getElementById("addrerrormsg").style.display = "inline";
+	    		is_valid = false;
+	  	}
+	  	if (quantityCheck.value == "") {
+	    		document.getElementById("qtyerrormsg").style.display = "inline";
+	    		is_valid = false;
+	  	}
+	  	return is_valid;
+	}
+</script>
+</body>

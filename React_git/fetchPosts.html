@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2> Fetch  Example</h2>
+    <input type="button" value="Fecth All Posts" onclick="abc()"/>
+    <pre id="myText" ></pre>
+     <div class="container1"></div>
+     <table class="container2" style="border:1px solid black; border-collapse:collapse">
+     	<thead>
+     	<tr>
+     	<th style="border:1px solid black">Id</th>
+     	<th style="border:1px solid black">Title</th>
+     	<th>Body</th>
+     	</tr>
+     	</thead>
+     	<tbody class="container" >
+     	
+     	</tbody>
+     </table>
+    <script>
+       function abc(){
+           const URL="https://jsonplaceholder.typicode.com/posts";
+           fetch(URL)
+           .then(res=> res.json())
+           .then(data=>{
+               console.log(data);
+               //document.getElementById("myTable").innerHTML = JSON.stringify(data, null, 4);
+    		    let html = '';
+		    data.forEach(user => {
+			let htmlSegment = 
+		        `<tr>
+		             <td style="border:1px solid black" >${user.id}</td>
+		             <td style="border:1px solid black">${user.title}</td>
+		             <td style="border:1px solid black">${user.body}</td>
+		        </tr>`;
+
+			html += htmlSegment;
+		    });
+
+		    let container = document.querySelector('.container');
+		    container.innerHTML = html;
+			   })
+		       }
+    </script>
+</body>
+
+</html>
