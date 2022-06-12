@@ -1,0 +1,28 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "cname": "PHP",
+      "duration": "3 Month",
+      "price": "5000"
+    },
+    {
+      "id": 2,
+      "cname": "Angular",
+      "duration": "4 Month",
+      "price": "4000"
+    },
+    {
+      "id": 3,
+      "cname": "React",
+      "duration": "5 Month",
+      "price": "8000"
+    },
+    {
+      "id": 4,
+      "cname": "Java",
+      "duration": "6 Month",
+      "price": "3000"
+    }
+  ]
+}

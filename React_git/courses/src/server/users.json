@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "fname": "Trupti",
+      "lname": "Kurzekar",
+      "email": "tkurzekar@gmail.com",
+      "mobile": 7867567654
+    },
+    {
+      "id": 2,
+      "fname": "Test",
+      "lname": "Data",
+      "email": "test@gmail.com",
+      "mobile": 9467567654
+    },
+    {
+      "id": 3,
+      "fname": "Gita",
+      "lname": "Varma",
+      "email": "gita@gmail.com",
+      "mobile": 7889767654
+    },
+    {
+      "fname": "R",
+      "lname": "K",
+      "email": "rk@gmail.com",
+      "mobile": "4563787654",
+      "id": 4
+    },
+    {
+      "fname": "test",
+      "lname": "test1",
+      "email": "test12345@gmail.com",
+      "mobile": "289098777",
+      "id": 5
+    },
+    {
+      "fname": "hjh",
+      "lname": "fhfh",
+      "email": "hg@g.com",
+      "mobile": "4567766666",
+      "id": 6
+    }
+  ]
+}
